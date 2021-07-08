@@ -1,0 +1,11 @@
+name = "branding"
+type = "webpack"
+account_id = "897c203117fc45efa64b5eb52b3206e8"
+workers_dev = true
+route = ""
+zone_id = ""
+webpack_config = "webpack.config.js"
+kv_namespaces = []
+
+[triggers]
+crons = []
