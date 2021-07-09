@@ -53,6 +53,13 @@ async function gne_svg(parameters) {
                 : ""
         }
     </style>
+    
+    ${
+        parameters.inject
+            ? await fetch(`https://raw.githubusercontent.com/${parameters.user}/${parameters.user}/main/branding.svg?t=${Date.now()}`).then((r) => r.text())
+            : ""
+    }
+    
     <rect id="background" rx="${parameters.radius}"></rect>
     <g id="title-wrap">
         <text id="title">${parameters.title}</text>

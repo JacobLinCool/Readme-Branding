@@ -19,7 +19,7 @@ async function handle_request(event) {
     // Favicon
     if (url.pathname.includes("favicon.ico")) return new Response("No Favicon");
 
-    const parameters = await parse_parameters(new URLSearchParams(url));
+    const parameters = await parse_parameters(new URLSearchParams(url.search));
 
     const svg = await gne_svg(parameters);
 
